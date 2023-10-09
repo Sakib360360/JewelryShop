@@ -28,7 +28,7 @@ const AddJwl = () => {
         }
         console.log(newJwl)
 
-        fetch('http://localhost:5000/addJwl', {
+        fetch('https://jewelry-shop-server-side-cmo75eyi7-sakib360360.vercel.app/addJwl', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

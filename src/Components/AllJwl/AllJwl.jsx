@@ -6,7 +6,7 @@ const AllJwl = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/alljwl`)
+        fetch(`https://jewelry-shop-server-side-cmo75eyi7-sakib360360.vercel.app/alljwl`)
             .then(response => response.json())
             .then(data => {
                 setJwl(data);
