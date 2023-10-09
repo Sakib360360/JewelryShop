@@ -17,7 +17,7 @@ const GallerySection = () => {
                         <img className='md:h-44 h-40 w-60 md:w-72 md:scale-100 md:hover:scale-105 ease-in duration-500 ' src="https://ion.r2net.com/images/HomePage/SpecialGalleriesBanner/N/Mobile/Vertical/DiamondStuds.jpg" alt="" />
                     </div>
                     <div data-aos="fade-down">
-                        <img className='md:h-44 h-40 w-60 md:w-72 md:scale-100 md:hover:scale-105 ease-in duration-500' src="https://i.pinimg.com/736x/4c/e1/1d/4ce11d336253fb6fcb037e0667a44a80.jpg" alt="" />
+                        <img className='md:h-44 h-40 w-60 md:w-72 md:scale-100 md:hover:scale-105 ease-in duration-500' src="https://st.depositphotos.com/3006519/4596/i/450/depositphotos_45960435-stock-photo-gold-jewelry.jpg" alt="" />
                     </div>
                     <div data-aos="fade-left">
                         <img className='md:h-44 h-40 w-60 md:w-72 md:scale-100 md:hover:scale-105 ease-in duration-500' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuzFX2tMTbDJzxaBkhjAAKMnnvGPHYhXeZFw&usqp=CAU" alt="" />

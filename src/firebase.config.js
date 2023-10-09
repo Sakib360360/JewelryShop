@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAJ4l9h3oSAespNmcfzdsH7IAAdEKyGOR8",
-  authDomain: "jewelryshop-ba468.firebaseapp.com",
-  projectId: "jewelryshop-ba468",
-  storageBucket: "jewelryshop-ba468.appspot.com",
-  messagingSenderId: "703292302123",
-  appId: "1:703292302123:web:90969436793973af745b6e"
+  apiKey: "AIzaSyAweW05LsYaMzCrXaOt5CEoXaXOYcGPAvs",
+  authDomain: "jewelry-shop-4b80f.firebaseapp.com",
+  projectId: "jewelry-shop-4b80f",
+  storageBucket: "jewelry-shop-4b80f.appspot.com",
+  messagingSenderId: "797407205117",
+  appId: "1:797407205117:web:508d9c31d1b58db9fb9094"
 };
 
 // Initialize Firebase
