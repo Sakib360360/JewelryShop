@@ -26,10 +26,10 @@ const Bannar = () => {
                 className="mySwiper"
             >
                 <SwiperSlide ><div className="relative">
-                    <img className="md:h-[90vh] h-[60vh]  w-full" src="https://keepsakesjewelry.com/images/Flash/bridal-jewelry-at-keepsakes-jewelry.jpg" alt="" />
-                    <div className="absolute md:top-72 md:left-20 space-y-3">
+                    <img className="md:h-[90vh] h-[60vh]  w-full" src="https://dcassetcdn.com/design_img/2886222/654209/654209_15888442_2886222_088350be_image.jpg" alt="" />
+                    <div className="absolute top-64 right-24 md:top-96 md:right-40 space-y-3">
 
-                        <Link to='/allToys'><button className="md:px-20">.</button></Link>
+                        <Link to='/allJwl'><button className="md:px-20 btn btn-outline">Sell All</button></Link>
                     </div>
                 </div></SwiperSlide>
 
