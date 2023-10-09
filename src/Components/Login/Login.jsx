@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-
+import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import animLogin from '../../Animation/106680-login-and-sign-up.json'
 import Lottie from 'lottie-react'
@@ -11,16 +11,22 @@ import { AuthContext } from '../../Providers/AuthProvider';
 
 
 
-const Login = () => { 
+
+
+const Login = () => {
     // useTitle('login')
     const location = useLocation()
     const from = location?.state?.from?.pathname || '/'
+    const [showPassword, setShowPassword] = useState(false);
+    const handleTogglePassword = () => {
+        setShowPassword(!showPassword);
+    };
     const navigate = useNavigate()
-    const { signInByGoogle,signIn } = useContext(AuthContext)
+    const { signInByGoogle, signIn } = useContext(AuthContext)
     const [error, setError] = useState(null)
     const handleGoogleSignIn = () => {
         signInByGoogle()
-            .then(result => { 
+            .then(result => {
                 const LUser = result.user;
                 navigate(from, { replace: true })
             })
@@ -34,16 +40,16 @@ const Login = () => {
         event.preventDefault()
         const email = event.target.email.value;
         const password = event.target.password.value;
-        signIn(email,password)
-        .then(result => { 
-            const loggedUser = result.user;
-            navigate(from,{replace:true})
-            
-        })
-        .catch(error => {
-            setError(error.message)
-            
-        })
+        signIn(email, password)
+            .then(result => {
+                const loggedUser = result.user;
+                navigate(from, { replace: true })
+
+            })
+            .catch(error => {
+                setError(error.message)
+
+            })
     }
 
     return (
@@ -65,7 +71,13 @@ const Login = () => {
                             <p className="m-4 mb-0 text-center font-semibold text-slate-500 border-2 p-2 rounded-full h-12 w-12">Or</p>
                         </div>
                         <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded" type="email" placeholder="Email Address" name='email' required />
-                        <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4" type="password" placeholder="Password" name='password' required />
+                        <div className='relative'>
+                            <button className='absolute right-4 bottom-2' type="button" onClick={handleTogglePassword}>
+                                {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                            </button>
+                            <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4" type={showPassword ? 'text' : 'password'} placeholder="Password" name='password' required />
+                        </div>
+
 
                         <div className="text-center md:text-left">
                             <button className="mt-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider" type="submit">Login</button>
