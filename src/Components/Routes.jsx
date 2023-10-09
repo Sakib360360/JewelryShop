@@ -49,23 +49,6 @@ const Routes = createBrowserRouter([
                 errorElement:<ErrorPage></ErrorPage>,
                 element:<PrivateRoutes><MyJwl></MyJwl></PrivateRoutes>
             },
-            // {
-            //     path:'/toyDetails/:id',
-            //     errorElement:<ErrorPage></ErrorPage>,
-            //     element:<PrivateRoutes><ToyDetails></ToyDetails></PrivateRoutes>,
-            //     loader:({params})=> fetch(`https://toy-place-server.vercel.app/toyDetails/${params.id}`)
-            // },
-            // {
-            //     path:'/gallery',
-            //     errorElement:<ErrorPage></ErrorPage>,
-            //     element:<GallerySection></GallerySection>
-            // },
-            // {
-            //     path:'/updateToy/:id',
-            //     errorElement:<ErrorPage></ErrorPage>,
-            //     element:<UpdateToy></UpdateToy>,
-            //     loader:({params})=>fetch(`https://toy-place-server.vercel.app/toyDetails/${params.id}`)
-            // },
             {
                 path:'/blogs',
                 errorElement:<ErrorPage></ErrorPage>,

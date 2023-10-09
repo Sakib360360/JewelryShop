@@ -15,12 +15,12 @@ const AddJwl = () => {
         const picture = form.url.value;
         const details = form.details.value;
         const sellerName = form.sellerName.value;
-        const postedBy = form.email.value;
+        const email = form.email.value;
         const newJwl = {
             "name": name,
             "price": price,
             "picture": picture,
-            "postedBy": postedBy,
+            "email": email,
             "details": details,
             "sellerName": sellerName
 
@@ -28,7 +28,7 @@ const AddJwl = () => {
         }
         console.log(newJwl)
 
-        fetch('https://jewelry-shop-server-side-cmo75eyi7-sakib360360.vercel.app/addJwl', {
+        fetch('http://localhost:5000/addJwl', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

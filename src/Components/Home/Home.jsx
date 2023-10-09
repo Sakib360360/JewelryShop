@@ -2,13 +2,17 @@ import React, { useEffect, useState } from 'react';
 import Bannar from './Bannar';
 import GallerySection from '../Gallary/Gallary';
 import Shop from '../Shop/Shop';
+import useClient from '../Hooks/useClient';
+import useAdmin from '../Hooks/useAdmin';
 
 const Home = () => {
     const [jwl, setJwl] = useState([])
-
+    const [isClient,isClientLoading] = useClient()
+    const [isAdmin,isAdminLoading] = useAdmin()
+    console.log(isClient,isAdmin)
     useEffect(() => {
 
-        fetch(`https://jewelry-shop-server-side-cmo75eyi7-sakib360360.vercel.app/alljwl`)
+        fetch(`http://localhost:5000/alljwl`)
             .then(response => response.json())
             .then(data => {
                 setJwl(data);

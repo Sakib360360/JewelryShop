@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const MyJwlCard = ({ item }) => {
-    const { price,  name, postedBy, picture, _id } = item
+    const { price,  name, email, picture, _id } = item
 
 
     return (
@@ -23,7 +23,7 @@ const MyJwlCard = ({ item }) => {
                     </div>
                 </div>
             </td>
-            <td className='border-l-2 border-r-2'>{postedBy}</td>
+            <td className='border-l-2 border-r-2'>{email}</td>
             <td>
 
 

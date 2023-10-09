@@ -10,7 +10,7 @@ const MyJwl = () => {
     const [message,setMessage] = useState(null)
     const [loading,setLoading] = useState(true)
     useEffect(() => {
-        fetch(`https://jewelry-shop-server-side-cmo75eyi7-sakib360360.vercel.app/myJwl/${user.email}`)
+        fetch(`http://localhost:5000/myJwl/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyJwl(data)
@@ -46,7 +46,7 @@ const MyJwl = () => {
         }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
-                fetch(`https://jewelry-shop-server-side-cmo75eyi7-sakib360360.vercel.app/delete/${id}`, {
+                fetch(`http://localhost:5000/delete/${id}`, {
                     method: "DELETE",
                     headers: {
                         'Content-Type': 'application/json',
