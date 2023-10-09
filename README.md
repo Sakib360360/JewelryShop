@@ -8,4 +8,4 @@
 - You can later delete any product that you added.
 - The product that other added you can not update or delete.
 
-# live link: https://jewelry-shop-center.netlify.app/
+# live link: https://jewelry-shop-4b80f.web.app/
